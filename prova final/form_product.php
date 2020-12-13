@@ -1,4 +1,5 @@
 <?php
+//viusi corrections - see comments below amd rubric in moodle
 //Variables definition
 $name=$capitalisedName=$price=$discount=$discountQuantity=$finalPrice=$replacedMessage=null;
 
@@ -20,12 +21,12 @@ if ($_POST){
   }
   //discountQuantity
   //if $discount and $price have been initialised and are not null
-  if(($discount)&&($price)){
+  if(($discount)&&($price)){  //visusi corrections: Falta isset
     $finalPrice=discountCalculation($discount,$price);
   }
   //message replacement
   //if $finalPrice is false using !
-  if(!discountCalculation($discount,$price))
+  if(!discountCalculation($discount,$price))//visusi correction - you already have saved the value in finalPrice variable in the line number 25
     $replacedMessage="Discount cannot be greater than price";
   else
     $replacedMessage=messageReplacement($capitalisedName,$finalPrice);
@@ -64,7 +65,7 @@ if ($_POST){
 
     <?php
     //if $finalPrice or $replacedMessage have been initialised and aren't null value
-    if ((isset($finalPrice))&&(isset($replacedMessage))){
+    if ((isset($finalPrice))&&(isset($replacedMessage))){//visusi corrections - condition has to be || instead of &&
         echo "<p><b>Form output</b></p>";
         echo $replacedMessage; //show message to the user
     }
