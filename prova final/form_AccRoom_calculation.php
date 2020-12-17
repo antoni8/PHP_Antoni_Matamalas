@@ -1,11 +1,12 @@
 <?php
+//viusi corrections - see comments below amd rubric in moodle
 //calcular el preu del tipus d'habitació i retornar un valor numeric
 //si es single el preu es 30
 //si es double el preu es 50
 //en cas contrari el preu es 0
 //emprar la funcio strcmp vista als exercicis de classe
 function typePriceCalculation($type){
-if (!strcmp($type, 'single'))
+if (!strcmp($type, 'single')) //visusi corrections - Be attentive to solution in class
   return 30;
 elseif (!strcmp($type, 'double'))
   return 50;
@@ -18,7 +19,7 @@ return 0;
 //en cas contrari el preu es 0
 //emprar la funcio strcmp vista als exercicis de classe
 function genderPriceCalculation($gender){
-  if (!strcmp($gender, 'female')||!strcmp($gender, 'male'))
+  if (!strcmp($gender, 'female')||!strcmp($gender, 'male'))  //visusi corrections - Be attentive to solution in class
     return 10;
   elseif (!strcmp($gender, 'mixed'))
     return 5;
@@ -30,7 +31,7 @@ function genderPriceCalculation($gender){
 //en cas contrari el preu es 0
 //emprar la funcio strcmp vista als exercicis de classe
 function viewsPriceCalculation($views){
-if (!strcmp($views, 'yes'))
+if (!strcmp($views, 'yes'))  //visusi corrections - Be attentive to solution in class
   return 15;
 return 0;
 }
